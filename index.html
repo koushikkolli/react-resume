@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: Nunito Sans;
+            }
+
+            .mainName{
+                height: 200px;
+                background-color: rgb(71, 68, 68);
+                color: white;
+                padding: 30px;
+                text-align: center;
+            }
+            h1{
+                font-size: 50px;
+            }
+
+            ul {
+                list-style-type: square;
+
+            }
+
+            .lightP{
+                color: gray;
+                margin: 5px;
+            }
+
+            .boldP{
+                font-weight: bold;
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+             
+            p{
+                margin: 5px;
+            }
+
+            h6{
+                margin-top: 10px;
+            }
+
+            span{
+                color: royalblue;
+            }
+
+
+
+        
+        </style>
+    </head>
+    <body>
+        <div class="container" id="root"></div>
+        
+    </body>
+    <script type="text/babel">
+        let rootElement = document.getElementById("root")
+        let NameHeading = ({name})=> <h1>{name}</h1>
+        let RoleHeading = ({name})=> <h3>{name}</h3>
+        let TopicHeading = ({name})=> <h6><b>{name}</b></h6>
+        let CreateContactList = ()=>{
+            return <ul>
+                <li>koushik8.kolli@gmail.com</li>
+                <li>+91 8310696989</li>
+                <li>Hyderabad, India</li>
+                <li>github.com/koushikkolli</li>
+                <li>linkedin.com/in/koushik-kolli</li>
+            </ul>
+        }
+        let CreateCerfiticationList = ()=>{
+            return <ul>
+                <li>Certified Data Scientist and AI Expert, Edvancer</li>
+                <li>DP-100 certification from Microsoft</li>
+                <li>Machine Learning Specialization, Coursera</li>
+                <li>Deep Learning Specialization, Coursera</li>
+                <li>Machine learning specialization from University of Washington</li>
+                <li>Google IT automation certificate</li>
+                <li>Natural Language Specialization, Coursera </li>
+            </ul>
+        }
+        let CreateSkillsList = ()=>{
+            return <ul>
+                <li>Python, JavaScript, NodeJS, Java, R</li>
+                <li>Machine Learning Algorithms, Deep Learning</li>
+                <li>Tensorflow, Pytorch, Fastai</li>
+                <li>Scikit-learn, Matplotlib</li>
+                <li>Relational Databases, MongoDB</li>
+                <li>Git, TFS</li>
+                <li>Apache Nifi</li>
+            </ul>
+        }
+        let CreatePagaraphTag = ({name})=> <p>{name}</p>
+        let CreateLightPagaraphTag = (props)=> <p className={props.className}>{props.name}</p>
+        let FirstColDiv = (props) =>{
+            return <div className={props.name}>
+                <TopicHeading name="CONTACT" />
+                <CreateContactList />
+                <TopicHeading name="PROFILE" />
+                <CreatePagaraphTag name="Techonology Analyst, working in Deep Learning based project with Infosys"/>
+                <TopicHeading name="EDUCATION" />
+                <CreateLightPagaraphTag name="2016" className="lightP"/>
+                <CreateLightPagaraphTag name="University Visvesvaraya College of Engineering, Bengaluru" className="lightP"/>
+                <CreateLightPagaraphTag name="Bachelor of Engineering, Mechanical" className="boldP"/>
+                <TopicHeading name="CERTIFICATIONS" />
+                <CreateCerfiticationList />
+                <TopicHeading name="TECHICAL SKILLS" />
+                <CreateSkillsList />
+            </div>
+        }
+        let CreateCurrentProjectList = ()=>{
+            return <ul>
+                <li class="text-justify">Developing application for migrating database from Oracle to Postgres using <span>Ora2PG and Deep
+                 Learning</span> based approch. Which already helped in migrating of thousands of databases for various clients and genearted 
+                 over <span>2 million USD of revenue</span></li>
+                <li class="text-justify">For coverting database objects and queries using Deep Learning, we are using <span>Transformer model</span>. The deep learning model has helped 
+                in <span>reducing the manual work by 20%</span> on top of Ora2PG</li>
+            </ul>
+        }
+
+        let CreatePastProjectsList = ()=>{
+            return <ul>
+                <li class="text-justify">Developed application for Data Profiling and Cleaning. Used <span>random forest and DBSCAN</span> 
+                 for filling the missing values and finding the outliers respectively</li>
+                <li class="text-justify">Developed an ETL application for migrating the data between different databases which generated <span>revenue
+                over 5 million USD</span>. Implemented bulk data loading into MSSQLServer and Oracle using BCP and SQLLoader</li>
+            </ul>
+        }
+        let CreatePersonalProjectsList = ()=>{
+            return <ul>
+                <li class="text-justify">Detecting whether the person is wearing the mask or not and distance between the persons using TFOD.
+                <span>Created my own data of 1500</span> pictures of with and without mask in approximately equal proportions. Labeled the data using Lableme. 
+                Used transfer learning from <span>Faster RCNN model</span>. I have directly used a ssd lite model to detect the persons as person is one of the 
+                class in the pre-trained ssd lite model and calculated the distance between two persons
+                </li>
+                <li class="text-justify">Building a solution to identify spam questions on quora based on intention as apparent question text and description. 
+                <span>LSTM model</span> trained from scratch took too long to fit and did not perform well. Training was made further challenging because of large volume of data when I tried to include description of the questions.
+                Incorporating pertained GLOVE embedding[twitter data with dimension 50 as it aligned best with social media language] ] reduced training time while <span>improving performance to 89% accuracy</span>
+                </li>
+            </ul>
+        }
+        let SecondColDiv = (props) =>{
+            return <div className={props.name}>
+                <TopicHeading name="EXPERIENCE" />
+                <CreateLightPagaraphTag name="2016 - PRESENT" className="lightP"/>
+                <CreateLightPagaraphTag name="Techonology Analyst | Infosys" className="boldP" />
+                <CreatePagaraphTag name="Current Project" />
+                <CreateCurrentProjectList />
+                <CreatePagaraphTag name="Past Projects" />
+                <CreatePastProjectsList />
+                <TopicHeading name="PERSONAL PROJECTS" />
+                <CreatePersonalProjectsList />
+            </div>
+        }
+        let CreateDiv = ({name}) => <div className={name}> </div>
+        let RowDiv = ({name})=>{
+            return <div className={name}>
+                <FirstColDiv name="col-sm-12 col-md-5"/>
+                <SecondColDiv name="col-sm-12 col-md-7"/>
+            </div>
+        }       
+        let BackgrounddDiv = ({name}) => {
+            return <div className={name}>
+                    <NameHeading name="Koushik K"/>
+                    <RoleHeading name="Software & Machine Learning"/>
+                   </div>
+        }
+        let mainDiv = <div>
+            <BackgrounddDiv name="mainName" />
+            <RowDiv name="row" />
+        </div>
+        ReactDOM.render(mainDiv, rootElement)
+    </script>
+    
+    
+</html> 
