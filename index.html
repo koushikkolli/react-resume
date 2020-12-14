@@ -63,18 +63,19 @@
         <div class="container" id="root"></div>
         
     </body>
+	<script src='https://kit.fontawesome.com/60493f8802.js' crossorigin="anonymous"></script> 
     <script type="text/babel">
         let rootElement = document.getElementById("root")
         let NameHeading = ({name})=> <h1>{name}</h1>
         let RoleHeading = ({name})=> <h3>{name}</h3>
         let TopicHeading = ({name})=> <h6><b>{name}</b></h6>
         let CreateContactList = ()=>{
-            return <ul>
-                <li>koushik8.kolli@gmail.com</li>
-                <li>+91 8310696989</li>
-                <li>Hyderabad, India</li>
-                <li>github.com/koushikkolli</li>
-                <li>linkedin.com/in/koushik-kolli</li>
+            return <ul className="fa-ul">
+                <li><i className="fa-li fa fa-envelope" />koushik8.kolli@gmail.com</li>
+                <li><i className="fa-li fa fa-phone-square" />+91 8310696989</li>
+                <li><i className="fa-li fa fa-map-marker" />Hyderabad, India</li>
+                <li><i className="fa-li fa fa-github-square" />github.com/koushikkolli</li>
+                <li><i className="fa-li fa fa-linkedin-square" />linkedin.com/in/koushik-kolli</li>
             </ul>
         }
         let CreateCerfiticationList = ()=>{
