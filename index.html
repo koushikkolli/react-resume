@@ -93,7 +93,7 @@
             return <ul>
                 <li>Python, JavaScript, NodeJS, React, Java, R</li>
                 <li>Machine Learning Algorithms, Deep Learning</li>
-                <li>Tensorflow, Pytorch, Fastai</li>
+                <li>TensorFlow, Pytorch, Fastai</li>
                 <li>Scikit-learn, Matplotlib</li>
                 <li>Relational Databases, MongoDB</li>
                 <li>Git, TFS</li>
@@ -107,7 +107,7 @@
                 <TopicHeading name="CONTACT" />
                 <CreateContactList />
                 <TopicHeading name="PROFILE" />
-                <CreatePagaraphTag name="Techonology Analyst, working in Deep Learning based project with Infosys"/>
+                <CreatePagaraphTag name="Technology Analyst, working in Deep Learning based project with Infosys"/>
                 <TopicHeading name="EDUCATION" />
                 <CreateLightPagaraphTag name="2016" className="lightP"/>
                 <CreateLightPagaraphTag name="University Visvesvaraya College of Engineering, Bengaluru" className="lightP"/>
@@ -121,9 +121,9 @@
         let CreateCurrentProjectList = ()=>{
             return <ul>
                 <li className="text-justify">Developing application for migrating database from Oracle to Postgres using <span>Ora2PG and Deep
-                 Learning</span> based approch. Which already helped in migrating of thousands of databases for various clients and genearted 
+                 Learning</span> based approach. Which already helped in migrating of thousands of databases for various clients and generated 
                  over <span>2 million USD of revenue</span></li>
-                <li className="text-justify">For coverting database objects and queries using Deep Learning, we are using <span>Transformer model</span>. The deep learning model has helped 
+                <li className="text-justify">For converting database objects and queries using Deep Learning, we are using <span>Transformer model</span>. The deep learning model has helped 
                 in <span>reducing the manual work by 20%</span> on top of Ora2PG</li>
             </ul>
         }
@@ -139,12 +139,12 @@
         let CreatePersonalProjectsList = ()=>{
             return <ul>
                 <li className="text-justify">Detecting whether the person is wearing the mask or not and distance between the persons using TFOD.
-                <span>Created my own data of 1500</span> pictures of with and without mask in approximately equal proportions. Labeled the data using Lableme. 
+                <span> Created my own data of 1500</span> pictures of with and without mask in approximately equal proportions. Labeled the data using LabelMe. 
                 Used transfer learning from <span>Faster RCNN model</span>. I have directly used a ssd lite model to detect the persons as person is one of the 
                 class in the pre-trained ssd lite model and calculated the distance between two persons
                 </li>
-                <li className="text-justify">Building a solution to identify spam questions on quora based on intention as apparent question text and description. 
-                <span>LSTM model</span> trained from scratch took too long to fit and did not perform well. Training was made further challenging because of large volume of data when I tried to include description of the questions.
+                <li className="text-justify">Building a solution to identify spam questions on Quora based on intention as apparent question text and description. 
+                <span> LSTM model</span> trained from scratch took too long to fit and did not perform well. Training was made further challenging because of large volume of data when I tried to include description of the questions.
                 Incorporating pertained GLOVE embedding [twitter data with dimension 50 as it aligned best with social media language] reduced training time while <span>improving performance to 89% accuracy</span>
                 </li>
             </ul>
@@ -153,7 +153,7 @@
             return <div className={props.name}>
                 <TopicHeading name="EXPERIENCE" />
                 <CreateLightPagaraphTag name="2016 - PRESENT" className="lightP"/>
-                <CreateLightPagaraphTag name="Techonology Analyst | Infosys" className="boldP" />
+                <CreateLightPagaraphTag name="Technology Analyst | Infosys" className="boldP" />
                 <CreatePagaraphTag name="Current Project" />
                 <CreateCurrentProjectList />
                 <CreatePagaraphTag name="Past Projects" />
